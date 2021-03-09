@@ -1,63 +1,91 @@
 /*
-Vous commencez votre carrière en tant qu'intégrateur web. Votre premier client est un renommé chef japonnais Daichi Sakamoto.
-Son designer japonais a prépare pour vous une maquette minimaliste, aérée et très lisible 
-vous pouvez voir son prototype en action ici https://cdpn.io/alyra/debug/8492b4775f2abb53fcd260adf4173723
+Vous commencez votre carrière en tant qu'intégrateur web. Votre premier client est un renommé chef japonais Daichi Sakamoto.
+Son designer japonais a préparé pour vous une maquette minimaliste, aérée et très lisible.
+Vous pouvez voir son prototype en action ici https://cdpn.io/alyra/debug/8492b4775f2abb53fcd260adf4173723
 La police utilisée ici - Changa - c'est une police google fonts à charger dans HTML settings > head stuff
 La référence de la couleur jaune - #fee500
 */
 /* ref: https://s3-us-west-2.amazonaws.com/s.cdpn.io/1328554/chottomotto.png (images/chottomotto) */
 
+:root {
+  --text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 /* ajouter une bordure jaune autour du body 24px  */
 /* changer la police pour Changa, laisser le sans-serif comme le 2e choix */
 /* augmente la taille de police au 20px, l'interligne de 1.8 */
+
 body {
+  border: 1.5rem /*24px*/ solid #fee500;
+  border-radius: 5px;
+  font-family: "Changa", sans-serif;
+  font-size: 1.3rem /*20px*/;
+  line-height: 1.8;
+  margin: 0;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
 }
 
-/* le block contenu est centré ne dépasse pas la largeur de 720px */
+/* le block contenu est centré, ne dépasse pas la largeur de 720px */
 main {
+  max-width: 720px;
+  margin: 0 auto;
+  /*text-align: var(--text-align);*/
 }
 
 /* les images ne dépassent pas l'écran */
 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
+
 /* centrer les éléments de la partie header */
-header {
-}
-
 /* titre h2 centré */
-h2 {
-}
+/* les éléments dans le footer centrés */
 
-/* les éléments dans le footer centrée */
+header,
+h2,
 footer {
+  text-align: var(--text-align);
 }
 
 /* taille de police plus grande (32px) dans le paragraphe intro, centré */
 .intro {
-}
-
-/* titre h2 centré */
-h2 {
-}
-
-/* les éléments dans le footer centrée */
-footer {
+  font-size: 2rem; /*32px*/
+  text-align: var(--text-align);
 }
 
 /* la liste sans bullets */
 /* pas de marge ni de padding */
 nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* les éléments de la liste affichés dans une ligne */
 nav li {
+  display: inline-block;
 }
 
 /* les liens dans la partie navigation en majuscules, couleur noir */
 /* espacés de 12px */
 nav a {
+  text-transform: uppercase;
+  color: black;
+  margin: 0.8rem /*12px*/;
+  text-decoration: none;
 }
 
 /* le lien dans la partie navigation en survol devient jaune  */
 nav a:hover {
+  background-color: rgb(223, 186, 93);
+  border-radius: 3px;
+  color: yellow;
+  padding: 2px;
 }
